@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MQTT</Name>
+  <Repository>prasad7676/mqtt</Repository>
+  <Registry/>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category>HomeAutomation:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1544314210</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MQTT/Config/</HostDir>
+      <ContainerDir>/etc/mosquitto/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MQTT/Data/</HostDir>
+      <ContainerDir>/var/lib/mosquitto/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MQTT/Logs/</HostDir>
+      <ContainerDir>/var/log/mosquitto/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Config" Target="/etc/mosquitto/" Default="/mnt/user/appdata/MQTT2/Config/" Mode="rw" Description="Container Path: /etc/mosquitto/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/MQTT/Config/</Config>
+  <Config Name="Persistant Data" Target="/var/lib/mosquitto/" Default="/mnt/user/appdata/MQTT2/Data/" Mode="rw" Description="Container Path: /var/lib/mosquitto/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/MQTT/Data/</Config>
+  <Config Name="Logs" Target="/var/log/mosquitto/" Default="/mnt/user/appdata/MQTT2/Logs/" Mode="rw" Description="Container Path: /var/log/mosquitto/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/MQTT/Logs/</Config>
+</Container>
